@@ -1,0 +1,81 @@
+ .github/workflows/static.yml                       |  43 [32m+++[m
+ .gitignore                                         |   4 [31m-[m
+ README.md                                          |   6 [32m+[m[31m-[m
+ about.html                                         |   2 [32m+[m[31m-[m
+ ...{backend-academy-info.json => academyInfo.json} |   0
+ .../data/{backend-courses.json => courses.json}    |   0
+ .../{backend-facilities.json => facilities.json}   |   0
+ .../data/{backend-results.json => results.json}    |   0
+ backend/data/seed.js                               |   4 [32m+[m[31m-[m
+ backend/middleware/{auth-middleware.js => auth.js} |   2 [32m+[m[31m-[m
+ .../models/{attendance-model.js => Attendance.js}  |   0
+ backend/models/{course-model.js => Course.js}      |   0
+ backend/models/{log-model.js => Log.js}            |   0
+ backend/models/{mark-model.js => Mark.js}          |   0
+ backend/models/{message-model.js => Message.js}    |   0
+ backend/models/{note-model.js => Note.js}          |   0
+ backend/models/{progress-model.js => Progress.js}  |   0
+ .../models/{timetable-model.js => Timetable.js}    |   0
+ backend/models/{user-model.js => User.js}          |   0
+ backend/routes/{admin-routes.js => admin.js}       |   4 [32m+[m[31m-[m
+ backend/routes/{auth-routes.js => auth.js}         |   6 [32m+[m[31m-[m
+ backend/routes/{chat-routes.js => chat.js}         |   6 [32m+[m[31m-[m
+ backend/routes/{notes-routes.js => notes.js}       |   4 [32m+[m[31m-[m
+ backend/routes/{progress-routes.js => progress.js} |   6 [32m+[m[31m-[m
+ backend/routes/{public-routes.js => public.js}     |   4 [32m+[m[31m-[m
+ backend/routes/{records-routes.js => records.js}   |  10 [32m+[m[31m-[m
+ .../routes/{timetable-routes.js => timetable.js}   |   4 [32m+[m[31m-[m
+ backend/server.js                                  |  24 [32m+[m[31m-[m
+ backend/utils/{access-utils.js => access.js}       |   2 [32m+[m[31m-[m
+ contact.html                                       |   2 [32m+[m[31m-[m
+ courses.html                                       |   4 [32m+[m[31m-[m
+ docs/{lp-suite.webp => ace-suite.webp}             | Bin
+ facilities.html                                    |   2 [32m+[m[31m-[m
+ frontend/about.html                                | 162 [32m+++++++++++[m
+ frontend/contact.html                              | 190 [32m+++++++++++++[m
+ frontend/courses.html                              | 238 [32m++++++++++++++++[m
+ frontend/facilities.html                           | 171 [32m+++++++++++[m
+ frontend/{main.html => index.html}                 |   2 [32m+[m[31m-[m
+ frontend/package.json                              |   2 [32m+[m[31m-[m
+ frontend/public/_redirects                         |   1 [31m-[m
+ frontend/public/{lp-logo.png => ace-logo.png}      | Bin
+ frontend/public/{lp-mark.svg => ace-mark.svg}      |   0
+ frontend/results.html                              | 314 [32m+++++++++++++++++++++[m
+ frontend/src/App.jsx                               |   4 [32m+[m[31m-[m
+ .../src/components/{lp-logo.css => AceLogo.css}    |   0
+ .../src/components/{LpLogo.jsx => AceLogo.jsx}     |  12 [32m+[m[31m-[m
+ .../components/{admin-logs.css => AdminLogs.css}   |   0
+ frontend/src/components/AdminLogs.jsx              |   2 [32m+[m[31m-[m
+ .../{class-progress.css => ClassProgress.css}      |   0
+ frontend/src/components/ClassProgress.jsx          |   2 [32m+[m[31m-[m
+ .../{lp-academy-info.json => academyInfo.json}     |   0
+ .../src/data/{lp-courses.json => courses.json}     |   0
+ .../data/{lp-facilities.json => facilities.json}   |   0
+ .../src/data/{lp-results.json => results.json}     |   0
+ frontend/src/main.jsx                              |   2 [32m+[m[31m-[m
+ frontend/src/pages/About.jsx                       |   6 [32m+[m[31m-[m
+ frontend/src/pages/AdminDashboard.jsx              |   6 [32m+[m[31m-[m
+ frontend/src/pages/Contact.jsx                     |   6 [32m+[m[31m-[m
+ frontend/src/pages/Courses.jsx                     |   6 [32m+[m[31m-[m
+ frontend/src/pages/Facilities.jsx                  |   6 [32m+[m[31m-[m
+ frontend/src/pages/Home.jsx                        |   8 [32m+[m[31m-[m
+ frontend/src/pages/Login.jsx                       |   8 [32m+[m[31m-[m
+ frontend/src/pages/Results.jsx                     |   6 [32m+[m[31m-[m
+ frontend/src/pages/StudentDashboard.jsx            |   8 [32m+[m[31m-[m
+ frontend/src/pages/TeacherDashboard.jsx            |   8 [32m+[m[31m-[m
+ frontend/src/pages/Teachers.jsx                    |   6 [32m+[m[31m-[m
+ frontend/src/utils/{auth-fetch.js => authFetch.js} |   0
+ frontend/teachers.html                             | 141 [32m+++++++++[m
+ frontend/vite.config.js                            |   6 [32m+[m[31m-[m
+ index.html                                         |   2 [32m+[m[31m-[m
+ netlify.toml                                       |   9 [31m-[m
+ package.json                                       |  12 [31m-[m
+ results.html                                       |   2 [32m+[m[31m-[m
+ teachers.html                                      |   2 [32m+[m[31m-[m
+ tests/check-assets.ps1                             |  30 [31m--[m
+ tests/{check-banned.ps1 => check_banned.ps1}       |   0
+ tests/content.test.js                              |   5 [32m+[m[31m-[m
+ tests/{run-all-checks.ps1 => run_all_checks.ps1}   |   2 [32m+[m[31m-[m
+ tests/{test-server.ps1 => test_server.ps1}         |   0
+ vercel.json                                        |  10 [31m-[m
+ 80 files changed, 1360 insertions(+), 176 deletions(-)
