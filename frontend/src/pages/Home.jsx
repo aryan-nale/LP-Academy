@@ -21,61 +21,61 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import AceLogo from "../components/AceLogo";
-import "./Home.css";
+import LpLogo from "../components/LpLogo";
+import "./home.css";
 
 const features = [
   {
     icon: <BookOpen className="feature-icon" />,
     tone: "yellow",
-    title: "Strong Concept Building",
+    title: "Experienced Leadership",
     description:
-      "We focus on the 'why' before the 'how', ensuring students master the fundamentals of every subject.",
+      "Led by Prof. Bajirao Patil and Prof. Vijay Ligade — both mechanical engineers and dedicated Physics teachers.",
   },
   {
     icon: <Video className="feature-icon" />,
     tone: "red",
-    title: "Free Revision Videos",
+    title: "Proven Results",
     description:
-      "Access our library of high-quality revision videos anytime to reinforce your learning at your own pace.",
+      "Our students have cleared JEE Advanced, NEET and MHT-CET. We are proud of every achiever from Karad and Satara.",
   },
   {
     icon: <ShieldCheck className="feature-icon" />,
     tone: "sky",
-    title: "Exam Oriented Notes",
+    title: "Hostel Facility",
     description:
-      "Curated notes designed specifically to help students excel in board and competitive examinations.",
+      "Separate boys and girls hostel for 11th-12th students at Rs 70,000 per year. [CONFIRM: food included?]",
   },
   {
     icon: <Zap className="feature-icon" />,
     tone: "lilac",
-    title: "Regular Assessments",
+    title: "Regular Test Series",
     description:
-      "Weekly tests and mock exams to track progress and identify areas for improvement.",
+      "Frequent mock tests and assessments to track progress and prepare students for board and entrance exams.",
   },
   {
     icon: <Users className="feature-icon" />,
     tone: "mint",
     title: "Doubt Solving Sessions",
     description:
-      "One-on-one sessions with expert faculty to clear all academic hurdles.",
+      "Dedicated sessions with expert faculty to clear every academic hurdle — no question goes unanswered.",
   },
   {
     icon: <CheckCircle className="feature-icon" />,
     tone: "yellow",
     title: "Personalized Attention",
     description:
-      "Small batch sizes ensure every student gets the focus they deserve from our educators.",
+      "Small batch sizes ensure every student gets focused mentoring from our educators.",
   },
 ];
 
 const ticker = [
-  "3rd - 8th All Subjects",
-  "9th - 10th Maths & Science",
-  "11th - 12th Accounts & Economics",
+  "Foundation (8th-10th) · State Board",
+  "JEE Coaching (11th-12th)",
+  "MHT-CET Coaching (11th-12th)",
+  "NEET Coaching (11th-12th)",
+  "Hostel for Boys & Girls (11th-12th)",
   "Admissions Open for 2026-27",
-  "Doubt Solving Sessions",
-  "Exam Oriented Notes",
 ];
 
 export default function Home() {
@@ -107,8 +107,8 @@ export default function Home() {
   return (
     <div className="home-page">
       <nav className="top-nav">
-        <Link to="/" className="brand" aria-label="ACE Institute home">
-          <AceLogo size={34} />
+        <Link to="/" className="brand" aria-label="LP Academy home">
+          <LpLogo size={34} />
         </Link>
 
         <div className="menu desktop-only">
@@ -122,26 +122,30 @@ export default function Home() {
               <div className="courses-highlight">
                 <GraduationCap className="courses-highlight-icon" />
                 <h4>Excellence in Education</h4>
-                <p>Empowering students with strong concept building.</p>
+                <p>Maharashtra State Board coaching and entrance exam preparation.</p>
               </div>
               <div className="courses-list">
                 <div className="course-item-mini">
-                  <h5>3rd - 8th All Subjects</h5>
-                  <p>Foundation building.</p>
+                  <h5>Foundation (8th-10th)</h5>
+                  <p>Maths & Science, State Board.</p>
                 </div>
                 <div className="course-item-mini">
-                  <h5>9th - 10th Maths & Science</h5>
-                  <p>In-depth coverage of Topics.</p>
+                  <h5>JEE / MHT-CET / NEET (11th-12th)</h5>
+                  <p>Entrance exam preparation.</p>
                 </div>
                 <div className="course-item-mini">
-                  <h5>11th - 12th Accounts and Economics</h5>
-                  <p>Specialized notes.</p>
+                  <h5>Hostel Available</h5>
+                  <p>Boys & girls, 11th-12th only.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <a href="#director" className="menu-link">About</a>
+          <Link to="/results" className="menu-link">Results</Link>
+          <Link to="/about" className="menu-link">About</Link>
+          <Link to="/teachers" className="menu-link">Teachers</Link>
+          <Link to="/facilities" className="menu-link">Facilities</Link>
+          <Link to="/contact" className="menu-link">Contact</Link>
         </div>
 
         <div className="login-dropdown">
@@ -170,57 +174,56 @@ export default function Home() {
             Admissions Open for 2026-27
           </motion.div>
           <h1>
-            Welcome to <span className="hero-word">Excellence</span>
+            Building Foundations. <span className="hero-word">Cracking Entrances.</span>
           </h1>
           <p>
-            Empowering Students for a Brighter Future through strong concept building,
-            regular assessments, and dedicated mentorship.
+            Maharashtra State Board coaching for 8th-10th and JEE, MHT-CET and NEET for 11th-12th.
           </p>
         </div>
 
         <div className="hero-cards">
           <motion.div className="hero-card card-yellow" {...deal(0)}>
-            <span className="card-index" aria-hidden="true">A<br />♠</span>
+            <span className="card-index" aria-hidden="true">L<br />♠</span>
             <Clock className="card-watermark" />
-            <div className="card-topline">Active Now</div>
-            <h3>Ongoing Courses</h3>
+            <div className="card-topline">Current Programs</div>
+            <h3>Our Courses</h3>
             <div className="hero-course-list">
-              <div className="hero-course-item">3rd - 8th All Subjects</div>
-              <div className="hero-course-item">9th - 10th Maths & Science</div>
-              <div className="hero-course-item">11th - 12th Accounts & Economics</div>
+              <div className="hero-course-item">Foundation (8th-10th)</div>
+              <div className="hero-course-item">JEE (11th-12th)</div>
+              <div className="hero-course-item">MHT-CET (11th-12th)</div>
+              <div className="hero-course-item">NEET (11th-12th)</div>
             </div>
             <ul className="hero-points">
-              <li>Strong Concept Building</li>
-              <li>Exam Oriented Notes</li>
-              <li>Regular Assessments</li>
+              <li>Maharashtra State Board</li>
+              <li>Exam-Oriented Notes</li>
+              <li>Regular Test Series</li>
               <li>Doubt Solving Sessions</li>
-              <li>Personalized Attention</li>
+              <li>Hostel Available</li>
             </ul>
           </motion.div>
 
           <motion.div className="hero-card card-red" {...deal(1)}>
-            <span className="card-index" aria-hidden="true">A<br />♥</span>
+            <span className="card-index" aria-hidden="true">P<br />♥</span>
             <Star className="card-watermark" />
-            <div className="card-topline">Launching Soon</div>
-            <h3>New Courses Coming Soon</h3>
+            <div className="card-topline">Admissions Open</div>
+            <h3>Join LP Academy</h3>
             <p className="launch-copy">
-              Upcoming batches will open shortly with structured learning plans
-              and personal counselling support for every student.
+              New batches open for 2026-27. Get personal counselling and guidance from our experienced faculty.
             </p>
             <ul className="hero-points">
-              <li>New session batches for all levels</li>
-              <li>Early guidance before batch selection</li>
-              <li>Small batch size and focused mentoring</li>
+              <li>Expert Physics faculty</li>
+              <li>Proven JEE / NEET / MHT-CET results</li>
+              <li>Separate hostel for boys & girls</li>
             </ul>
             <div className="launch-tags">
-              <span>Admissions Opening Soon</span>
-              <span>Counselling Open</span>
+              <span>Admissions Open</span>
+              <span>Counselling Available</span>
             </div>
           </motion.div>
         </div>
 
         <Link to="/courses" className="explore-more">
-          Explore More Courses
+          View Courses
           <ArrowRight size={18} />
         </Link>
       </section>
@@ -236,11 +239,10 @@ export default function Home() {
       <section className="why-section">
         <div className="section-head">
           <h2>
-            Why Gen-Z & Alpha Students Choose ACE INSTITUTE?
+            Why Choose LP Academy?
           </h2>
           <p>
-            We combine traditional teaching excellence with modern learning methods
-            to provide a comprehensive educational experience.
+            We combine strong concept-building with focused exam preparation, led by experienced mechanical engineers turned educators.
           </p>
         </div>
 
@@ -266,42 +268,88 @@ export default function Home() {
         <div className="director-image-col">
           <div className="director-stack">
             <div className="photo-card-back" />
-            <img src="/owner.jpg" alt="Muskan Kalra - Director" />
+            {/* REPLACE IMAGE */}
+            <img src="/logo.png" alt="LP Academy, Karad" />
             <div className="verified-badge">
               <div><Award size={20} /></div>
               <div>
-                <small>Verified Expert</small>
-                <strong>NET Qualifier</strong>
+                <small>Maharashtra State Board</small>
+                <strong>Karad, Satara</strong>
               </div>
             </div>
           </div>
         </div>
 
         <div className="director-content">
-          <div className="director-tag">Meet the Director</div>
-          <h2>Muskan Kalra</h2>
+          <div className="director-tag">Meet Our Leadership</div>
+          <h2>Prof. Bajirao Patil</h2>
           <div className="chips">
-            <span>M.Com</span>
-            <span>B.Com</span>
-            <span>B.Ed</span>
+            <span>Chairman</span>
+            <span>Mechanical Engineer</span>
+            <span>Physics Teacher</span>
           </div>
           <p className="quote">
-            "At ACE INSTITUTE, we don't just teach subjects; we build foundations.
-            Our mission is to provide every student with the clarity they need to excel in their academic journey."
+            "At LP Academy, we build the foundation first. With the right concepts and consistent practice, every student can crack JEE, NEET and MHT-CET. Our mission is to bring quality education to Karad and the Satara district."
           </p>
           <div className="director-points">
             <div>
               <BookCheck size={22} />
               <div>
-                <h4>Concept Building</h4>
-                <p>Deep conceptual clarity for all subjects.</p>
+                <h4>Strong Concept Building</h4>
+                <p>Deep conceptual clarity in Physics, Chemistry, Maths and Biology.</p>
               </div>
             </div>
             <div>
               <MessageCircle size={22} />
               <div>
                 <h4>Doubt Solving</h4>
-                <p>Dedicated sessions for every query.</p>
+                <p>Dedicated sessions for every query — no student left behind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vice-chairman" className="director-section">
+        <div className="director-image-col">
+          <div className="director-stack">
+            <div className="photo-card-back" />
+            {/* REPLACE IMAGE */}
+            <img src="/logo.png" alt="LP Academy, Karad" />
+            <div className="verified-badge">
+              <div><Award size={20} /></div>
+              <div>
+                <small>Maharashtra State Board</small>
+                <strong>Karad, Satara</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="director-content">
+          <div className="director-tag">Meet Our Leadership</div>
+          <h2>Prof. Vijay Ligade</h2>
+          <div className="chips">
+            <span>Vice Chairman</span>
+            <span>Mechanical Engineer</span>
+            <span>Physics Teacher</span>
+          </div>
+          <p className="quote">
+            "Our focus is on making every student's potential visible through rigorous practice and personal attention. LP Academy is built on the belief that quality coaching should be accessible in Karad."
+          </p>
+          <div className="director-points">
+            <div>
+              <BookCheck size={22} />
+              <div>
+                <h4>Strong Concept Building</h4>
+                <p>Deep conceptual clarity in Physics, Chemistry, Maths and Biology.</p>
+              </div>
+            </div>
+            <div>
+              <MessageCircle size={22} />
+              <div>
+                <h4>Doubt Solving</h4>
+                <p>Dedicated sessions for every query — no student left behind.</p>
               </div>
             </div>
           </div>
@@ -311,12 +359,11 @@ export default function Home() {
       <footer className="footer">
         <div className="footer-grid">
           <div className="footer-brand">
-            <AceLogo size={44} tone="paper" />
+            <LpLogo size={44} tone="paper" />
             <p>
-              Leading the way in quality education with a focus on concept building,
-              personalized attention, and academic excellence.
+              LP Academy (Ligade-Patil Junior College of Science), Karad — quality coaching for 8th-10th (Foundation) and 11th-12th (JEE, MHT-CET, NEET), with hostel facility.
             </p>
-            <a href="https://wa.me/918053515171" target="_blank" rel="noreferrer" className="whatsapp">
+            <a href="https://wa.me/918975756530" target="_blank" rel="noreferrer" className="whatsapp">
               <MessageCircle size={18} /> WhatsApp Us
             </a>
           </div>
@@ -324,20 +371,25 @@ export default function Home() {
           <div>
             <h4>Quick Links</h4>
             <Link to="/">Home</Link>
-            <Link to="/login?role=student">Student Login</Link>
-            <Link to="/login?role=teacher">Teacher Login</Link>
+            <Link to="/courses">Courses</Link>
+            <Link to="/about">About</Link>
+            <Link to="/teachers">Teachers</Link>
+            <Link to="/facilities">Facilities</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/results">Results</Link>
           </div>
 
           <div>
             <h4>Contact Us</h4>
-            <p><MapPin size={16} /> 23A, T.P Scheme - 9, Behind Shopping Complex, Rewari</p>
-            <p><Phone size={16} /> 8053515171</p>
-            <p><Mail size={16} /> mathswithmuskankalra@gmail.com</p>
+            <p><MapPin size={16} /> Behind JK Petrol Pump, Karad</p>
+            <p><MapPin size={16} /> Vidyanagar, Karad, Dist. Satara 415 124</p>
+            <p><Phone size={16} /> <a href="tel:+918975756530" style={{color:'inherit'}}>8975756530</a></p>
+            <p><Mail size={16} /> [CONFIRM: email]</p>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 ACE Institute. All rights reserved.</p>
+          <p>© 2026 LP Academy, Karad. All rights reserved.</p>
           <div>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>

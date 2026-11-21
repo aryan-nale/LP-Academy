@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../models/user-model');
 
 // The signing secret lives in the environment (Render → Environment → JWT_SECRET),
 // never in the code. Changing it signs everyone out.

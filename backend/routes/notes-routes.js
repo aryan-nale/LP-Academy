@@ -4,8 +4,8 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const mongoose = require('mongoose');
-const Note = require('../models/Note');
-const { requireAuth, requireRole } = require('../middleware/auth');
+const Note = require('../models/note-model');
+const { requireAuth, requireRole } = require('../middleware/auth-middleware');
 
 // Files are stored in MongoDB (GridFS) instead of the local disk.
 // Render's filesystem is ephemeral (wiped on every deploy/restart) and the

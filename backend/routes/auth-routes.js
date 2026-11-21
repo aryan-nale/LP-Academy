@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const User = require('../models/User');
-const Log = require('../models/Log');
-const { signToken, verifyToken, requireAuth, requireRole } = require('../middleware/auth');
+const User = require('../models/user-model');
+const Log = require('../models/log-model');
+const { signToken, verifyToken, requireAuth, requireRole } = require('../middleware/auth-middleware');
 
 const ROLES = ['admin', 'teacher', 'student'];
 

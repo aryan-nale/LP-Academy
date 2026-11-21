@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
 import { CalendarCheck, Clock, FolderOpen, Home, Menu, MessageCircle, PenLine } from 'lucide-react';
-import AceLogo, { AceMark } from '../components/AceLogo';
+import LpLogo, { LpMark } from '../components/LpLogo';
 import '../styles/dashboard.css';
 
 const socket = io.connect('https://ace-academy-backend-e0pi.onrender.com');
@@ -192,7 +192,7 @@ const StudentDashboard = () => {
     return (
       <div className="dash-loading">
         <div className="dash-loading-card">
-          <AceMark size={64} className="dash-loading-mark" />
+          <LpMark size={64} className="dash-loading-mark" />
           <h3>Preparing Your Dashboard</h3>
           <p>Loading classes, notes, attendance, and chat.</p>
           <div className="dash-spinner" />
@@ -210,14 +210,14 @@ const StudentDashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="mobile-header">
-        <div className="mobile-logo-text"><AceLogo size={26} tone="paper" showSub={false} /><span className="role-tag">Student</span></div>
+        <div className="mobile-logo-text"><LpLogo size={26} tone="paper" showSub={false} /><span className="role-tag">Student</span></div>
         <button className="hamburger-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu"><Menu size={22} /></button>
       </div>
 
       {isMobileMenuOpen && <div className="mobile-overlay" onClick={() => setIsMobileMenuOpen(false)}></div>}
 
       <aside className={`sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="sidebar-logo"><AceLogo size={34} tone="paper" showSub={false} /><span className="role-tag">Student</span></div>
+        <div className="sidebar-logo"><LpLogo size={34} tone="paper" showSub={false} /><span className="role-tag">Student</span></div>
         <nav className="sidebar-nav">
           <button className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => handleNav('dashboard')}><span className="nav-icon"><Home size={18} strokeWidth={2.4} /></span> Home / Profile</button>
           <button className={`nav-item ${activeTab === 'attendance' ? 'active' : ''}`} onClick={() => handleNav('attendance')}><span className="nav-icon"><CalendarCheck size={18} strokeWidth={2.4} /></span> Class Attendance</button>

@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user-model');
 
 // Subjects are stored as "Grade 10: Math". Returns the subject names for one grade.
 const subjectsForGrade = (list, grade) =>

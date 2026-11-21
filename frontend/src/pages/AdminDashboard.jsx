@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
 import { Files, GraduationCap, Home, Menu, MessageCircle, ScrollText, UserPlus } from 'lucide-react';
-import AceLogo from '../components/AceLogo';
+import LpLogo from '../components/LpLogo';
 import AdminLogs from '../components/AdminLogs';
 import '../styles/dashboard.css';
 
@@ -299,14 +299,14 @@ export default function AdminDashboard() {
   return (
     <div className="dashboard-container">
       <div className="mobile-header">
-        <div className="mobile-logo-text"><AceLogo size={26} tone="paper" showSub={false} /><span className="role-tag">Admin</span></div>
+        <div className="mobile-logo-text"><LpLogo size={26} tone="paper" showSub={false} /><span className="role-tag">Admin</span></div>
         <button className="hamburger-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu"><Menu size={22} /></button>
       </div>
 
       {isMobileMenuOpen && <div className="mobile-overlay" onClick={() => setIsMobileMenuOpen(false)} />}
 
       <aside className={`sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="sidebar-logo"><AceLogo size={34} tone="paper" showSub={false} /><span className="role-tag">Admin</span></div>
+        <div className="sidebar-logo"><LpLogo size={34} tone="paper" showSub={false} /><span className="role-tag">Admin</span></div>
         <nav className="sidebar-nav">
           <button className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => handleNav('dashboard')}><span className="nav-icon"><Home size={18} strokeWidth={2.4} /></span> Admin Portal</button>
           <button className={`nav-item ${activeTab === 'addTeacher' ? 'active' : ''}`} onClick={() => handleNav('addTeacher')}><span className="nav-icon"><UserPlus size={18} strokeWidth={2.4} /></span> Add Teacher</button>

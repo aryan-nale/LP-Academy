@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Progress = require('../models/Progress');
-const { requireAuth, requireRole } = require('../middleware/auth');
-const { canViewStudent } = require('../utils/access');
+const Progress = require('../models/progress-model');
+const { requireAuth, requireRole } = require('../middleware/auth-middleware');
+const { canViewStudent } = require('../utils/access-utils');
 
 router.use(requireAuth);
 

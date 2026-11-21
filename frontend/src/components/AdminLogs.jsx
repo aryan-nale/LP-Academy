@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { LogIn, LogOut, KeyRound, Trash2, RefreshCw } from 'lucide-react';
-import './AdminLogs.css';
+import './admin-logs.css';
 
 const API = 'https://ace-academy-backend-e0pi.onrender.com/api/admin/logs';
 

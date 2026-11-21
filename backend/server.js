@@ -7,11 +7,11 @@ const http = require('http');
 const { Server } = require('socket.io');
 
 // Database Models
-const User = require('./models/User');
-const Log = require('./models/Log');
-const Message = require('./models/Message');
-const { requireAuth, requireRole, userFromToken } = require('./middleware/auth');
-const { canAccessRoom } = require('./utils/access');
+const User = require('./models/user-model');
+const Log = require('./models/log-model');
+const Message = require('./models/message-model');
+const { requireAuth, requireRole, userFromToken } = require('./middleware/auth-middleware');
+const { canAccessRoom } = require('./utils/access-utils');
 
 const MAX_MESSAGE_LENGTH = 2000;
 
@@ -188,13 +188,13 @@ mongoose
 app.use('/uploads', express.static('uploads'));
 
 // API Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/admin', requireAuth, requireRole('admin'), require('./routes/admin'));
-app.use('/api/chat', require('./routes/chat'));
-app.use('/api/notes', require('./routes/notes'));
-app.use('/api/timetable', require('./routes/timetable'));
-app.use('/api/progress', require('./routes/progress'));
-app.use('/api/records', require('./routes/records'));
+app.use('/api/auth', require('./routes/auth-routes'));
+app.use('/api/admin', requireAuth, requireRole('admin'), require('./routes/admin-routes'));
+app.use('/api/chat', require('./routes/chat-routes'));
+app.use('/api/notes', require('./routes/notes-routes'));
+app.use('/api/timetable', require('./routes/timetable-routes'));
+app.use('/api/progress', require('./routes/progress-routes'));
+app.use('/api/records', require('./routes/records-routes'));
 
 // Start server
 server.listen(PORT, () => {

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
-const Course = require('../models/Course');
+const User = require('../models/user-model');
+const Course = require('../models/course-model');
 
 // 1. Fetch all courses for the landing page
 router.get('/courses', async (req, res) => {

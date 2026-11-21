@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Message = require('../models/Message');
-const { requireAuth } = require('../middleware/auth');
-const { canAccessRoom } = require('../utils/access');
+const Message = require('../models/message-model');
+const { requireAuth } = require('../middleware/auth-middleware');
+const { canAccessRoom } = require('../utils/access-utils');
 
 // Get all messages for a specific room (only for people in that conversation)
 router.get('/:room', requireAuth, async (req, res) => {

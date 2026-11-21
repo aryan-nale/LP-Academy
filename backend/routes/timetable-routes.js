@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Timetable = require('../models/Timetable');
-const { requireAuth, requireRole } = require('../middleware/auth');
+const Timetable = require('../models/timetable-model');
+const { requireAuth, requireRole } = require('../middleware/auth-middleware');
 
 router.use(requireAuth);
 

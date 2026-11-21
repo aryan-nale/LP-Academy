@@ -1,6 +1,6 @@
-# 🎓 ACE Academy
+# 🎓 LP Academy, Karad
 
-An institute management system for **ACE Institute (Achievers' Centre of Education)**. Admins, teachers and students each get their own dashboard, and changes show up live.
+An institute management system for **LP Academy (Ligade-Patil Junior College of Science, Karad)**. Admins, teachers and students each get their own dashboard, and changes show up live.
 
 [![Live site](https://img.shields.io/badge/Live-achieverscentreofeducation.vercel.app-2bb39a?style=flat-square&labelColor=0e1012)](https://achieverscentreofeducation.vercel.app/)
 ![React](https://img.shields.io/badge/React_19-Vite-2bb39a?style=flat-square&logo=react&logoColor=white&labelColor=0e1012)
@@ -9,7 +9,7 @@ An institute management system for **ACE Institute (Achievers' Centre of Educati
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-live_updates-2bb39a?style=flat-square&logo=socketdotio&logoColor=white&labelColor=0e1012)
 
 <p align="center">
-  <img src="docs/ace-suite.webp" alt="ACE Academy: public home page, course fees and the student portal sign-in" width="90%">
+  <img src="docs/lp-suite.webp" alt="LP Academy: public home page, course fees and the student portal sign-in" width="90%">
 </p>
 
 > Built and delivered as a paid client project. In production on Vercel (frontend) and Render (API), with MongoDB.

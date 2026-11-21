@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { AceMark } from '../components/AceLogo';
-import './Login.css';
+import { LpMark } from '../components/LpLogo';
+import './login.css';
 
 const Login = () => {
   const [searchParams] = useSearchParams();
@@ -77,7 +77,7 @@ const Login = () => {
         </Link>
         <div className="login-side-cards" aria-hidden="true">
           <div className="side-card side-card-back" />
-          <div className="side-card side-card-front"><AceMark size={220} /></div>
+          <div className="side-card side-card-front"><LpMark size={220} /></div>
         </div>
         <p className="login-side-title" aria-hidden="true">{portalName}<br />Portal</p>
       </aside>
@@ -87,8 +87,8 @@ const Login = () => {
           <ArrowLeft size={16} /> Home
         </Link>
         <div className="login-header">
-          <AceMark size={46} className="login-logo" />
-          <h2>ACE INSTITUTE</h2>
+          <LpMark size={46} className="login-logo" />
+          <h2>LP ACADEMY</h2>
           <p>{portalName} Portal</p>
         </div>
 

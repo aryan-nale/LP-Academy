@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
-const Log = require('../models/Log');
+const User = require('../models/user-model');
+const Log = require('../models/log-model');
 const bcrypt = require('bcrypt'); // <-- NEW: Import the encryption tool
 
 // Every route in this file is admin-only (enforced where it is mounted in server.js).

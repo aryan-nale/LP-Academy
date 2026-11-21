@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Attendance = require('../models/Attendance');
-const Mark = require('../models/Mark');
-const User = require('../models/User');
-const { requireAuth, requireRole } = require('../middleware/auth');
-const { teachesStudent, canViewStudent } = require('../utils/access');
+const Attendance = require('../models/attendance-model');
+const Mark = require('../models/mark-model');
+const User = require('../models/user-model');
+const { requireAuth, requireRole } = require('../middleware/auth-middleware');
+const { teachesStudent, canViewStudent } = require('../utils/access-utils');
 
 // Every route here needs a logged-in user.
 router.use(requireAuth);

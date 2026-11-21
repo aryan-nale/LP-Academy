@@ -6,7 +6,12 @@ import StudentDashboard from './pages/StudentDashboard';
 import TeacherDashboard from './pages/TeacherDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Courses from './pages/Courses';
-import { AceMark } from './components/AceLogo';
+import About from './pages/About';
+import Teachers from './pages/Teachers';
+import Facilities from './pages/Facilities';
+import Contact from './pages/Contact';
+import Results from './pages/Results';
+import { LpMark } from './components/LpLogo';
 
 const getDashboardPath = () => {
   const token = localStorage.getItem('token');
@@ -56,7 +61,7 @@ const PageTransition = ({ children }) => {
           initial={{ rotateY: 0, scale: 1 }}
           animate={{ rotateY: 180, scale: 0.6, opacity: 0, transition: { duration: 0.4 } }}
         >
-          <AceMark size={88} />
+          <LpMark size={88} />
         </motion.div>
       </motion.div>
 
@@ -81,6 +86,11 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<PageTransition><RootRoute /></PageTransition>} />
         <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
         <Route path="/courses" element={<PageTransition><Courses /></PageTransition>} />
+        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+        <Route path="/teachers" element={<PageTransition><Teachers /></PageTransition>} />
+        <Route path="/facilities" element={<PageTransition><Facilities /></PageTransition>} />
+        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+        <Route path="/results" element={<PageTransition><Results /></PageTransition>} />
         <Route path="/student-dashboard" element={<PageTransition><StudentDashboard /></PageTransition>} />
         <Route path="/teacher-dashboard" element={<PageTransition><TeacherDashboard /></PageTransition>} />
         <Route path="/admin-dashboard" element={<PageTransition><AdminDashboard /></PageTransition>} />

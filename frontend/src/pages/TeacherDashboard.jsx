@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
 import { BarChart3, CalendarDays, FileUp, Home, ListChecks, Menu, MessageCircle, PenLine } from 'lucide-react';
-import AceLogo, { AceMark } from '../components/AceLogo';
+import LpLogo, { LpMark } from '../components/LpLogo';
 import ClassProgress from '../components/ClassProgress';
 import '../styles/dashboard.css';
 
@@ -168,7 +168,7 @@ const TeacherDashboard = () => {
   if (!profile) return (
       <div className="dash-loading">
         <div className="dash-loading-card">
-          <AceMark size={64} className="dash-loading-mark" />
+          <LpMark size={64} className="dash-loading-mark" />
           <h3>Loading Teacher Portal...</h3>
           <div className="dash-spinner" />
         </div>
@@ -179,14 +179,14 @@ const TeacherDashboard = () => {
     <div className="dashboard-container">
       {/* --- NEW MOBILE HEADER --- */}
       <div className="mobile-header">
-        <div className="mobile-logo-text"><AceLogo size={26} tone="paper" showSub={false} /><span className="role-tag">Teacher</span></div>
+        <div className="mobile-logo-text"><LpLogo size={26} tone="paper" showSub={false} /><span className="role-tag">Teacher</span></div>
         <button className="hamburger-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Open menu"><Menu size={22} /></button>
       </div>
 
       {isMobileMenuOpen && <div className="mobile-overlay" onClick={() => setIsMobileMenuOpen(false)}></div>}
 
       <aside className={`sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="sidebar-logo"><AceLogo size={34} tone="paper" showSub={false} /><span className="role-tag">Teacher</span></div>
+        <div className="sidebar-logo"><LpLogo size={34} tone="paper" showSub={false} /><span className="role-tag">Teacher</span></div>
         <nav className="sidebar-nav">
           <button className={`nav-item ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => handleNav('dashboard')}><span className="nav-icon"><Home size={18} strokeWidth={2.4} /></span> Teacher Portal</button>
           <button className={`nav-item ${activeTab === 'timetable' ? 'active' : ''}`} onClick={() => handleNav('timetable')}><span className="nav-icon"><CalendarDays size={18} strokeWidth={2.4} /></span> Update Timetable</button>

@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Download, ArrowUpDown } from 'lucide-react';
 import { downloadXlsx } from '../utils/xlsx';
-import './ClassProgress.css';
+import './class-progress.css';
 
 const API = 'https://ace-academy-backend-e0pi.onrender.com/api/records/stats';
 

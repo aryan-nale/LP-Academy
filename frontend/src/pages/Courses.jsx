@@ -2,50 +2,48 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Sparkles, BadgePercent, BookOpenCheck } from "lucide-react";
-import AceLogo from "../components/AceLogo";
-import "./Courses.css";
+import LpLogo from "../components/LpLogo";
+import "./courses.css";
 
 const enrollmentMessage =
-  "Online enrollment has not started yet. Please contact 8053515171 for manual enrollment.";
+  "Please contact LP Academy on WhatsApp or call 8975756530 to enquire about admission.";
 
 const courses = [
   {
-    title: "Classes 3 to 5",
-    monthly: "INR 800 / month",
-    sixMonth: "INR 4500 / 6 months",
-    standard: "Regular total: INR 4800",
-    discount: "You save INR 300",
-    paymentNote: "6-month plan available with month-by-month payment.",
-    chips: ["All Core Subjects", "Foundation Focus"],
+    title: "Foundation — Classes 8th to 10th",
+    fee: "Rs 40,000 / year",
+    subjects: "Maths & Science",
+    board: "Maharashtra State Board",
+    description: "Strong conceptual foundation in Maths and Science with thorough State Board exam preparation.",
+    chips: ["State Board", "Classes 8th-10th", "Maths & Science"],
+    highlight: "Rs 40,000 per year",
   },
   {
-    title: "Classes 5 to 8",
-    monthly: "INR 1000 / month",
-    sixMonth: "INR 5500 / 6 months",
-    standard: "Regular total: INR 6000",
-    discount: "You save INR 500",
-    paymentNote: "6-month plan available with month-by-month payment.",
-    chips: ["All Core Subjects", "Concept Strengthening"],
+    title: "JEE — Classes 11th & 12th",
+    fee: "Rs 80,000 / year",
+    subjects: "Physics, Chemistry, Maths",
+    board: "Maharashtra State Board + JEE",
+    description: "Comprehensive JEE (Mains and Advanced) preparation with Physics, Chemistry and Maths, aligned with State Board syllabus.",
+    chips: ["JEE Mains & Advanced", "Classes 11th-12th", "PCM"],
+    highlight: "Rs 80,000 per year",
   },
   {
-    title: "Classes 9 to 10",
-    monthly: "INR 800 / subject / month",
-    monthlyCombo: "INR 1600 / month for 2 subjects",
-    sixMonth: "INR 9000 / 6 months (for 2 subjects)",
-    standard: "Regular total for 2 subjects: INR 9600",
-    discount: "You save INR 600",
-    paymentNote: "6-month combo plan available with month-by-month payment.",
-    chips: ["Math + Science Track", "Board Exam Oriented"],
+    title: "MHT-CET — Classes 11th & 12th",
+    fee: "Rs 80,000 / year",
+    subjects: "Physics, Chemistry, Maths / Biology",
+    board: "Maharashtra State Board",
+    description: "MHT-CET preparation with PCM and PCB tracks, fully aligned with the Maharashtra State Board syllabus.",
+    chips: ["MHT-CET", "Classes 11th-12th", "PCM & PCB"],
+    highlight: "Rs 80,000 per year",
   },
   {
-    title: "Classes 11 to 12",
-    monthly: "INR 1200 / subject / month",
-    monthlyCombo: "INR 2400 / month for 2 subjects",
-    sixMonth: "INR 13500 / 6 months (for 2 subjects)",
-    standard: "Regular total for 2 subjects: INR 14400",
-    discount: "You save INR 900",
-    paymentNote: "6-month combo plan available with month-by-month payment.",
-    chips: ["Accounts + Economics Track", "Board Exam Oriented"],
+    title: "NEET — Classes 11th & 12th",
+    fee: "Rs 80,000 / year",
+    subjects: "Physics, Chemistry, Biology",
+    board: "Maharashtra State Board + NEET",
+    description: "NEET preparation with focused Biology, Physics and Chemistry coaching aligned with State Board syllabus.",
+    chips: ["NEET UG", "Classes 11th-12th", "PCB"],
+    highlight: "Rs 80,000 per year",
   },
 ];
 
@@ -63,8 +61,6 @@ const cardVariants = {
 };
 
 export default function Courses() {
-  const handleEnroll = () => window.alert(enrollmentMessage);
-
   return (
     <div className="courses-page">
       <div className="courses-bg-glow courses-bg-glow-left" />
@@ -75,7 +71,7 @@ export default function Courses() {
           <ArrowLeft size={16} />
           <span>Back to Home</span>
         </Link>
-        <Link to="/" className="courses-brand"><AceLogo size={30} showSub={false} /></Link>
+        <Link to="/" className="courses-brand"><LpLogo size={30} showSub={false} /></Link>
       </header>
 
       <main className="courses-main">
@@ -87,12 +83,11 @@ export default function Courses() {
         >
           <p className="courses-pill">
             <Sparkles size={14} />
-            Explore More Courses
+            LP Academy Courses
           </p>
-          <h1>Course Fees & Enrollment Plans</h1>
+          <h1>Course Fees &amp; Programs</h1>
           <p>
-            Choose a monthly plan or a 6-month plan with discount benefits.
-            For 6-month plans, payment can still be done month-by-month.
+            All programs follow the Maharashtra State Board syllabus. For enquiries, contact us on WhatsApp.
           </p>
         </motion.section>
 
@@ -108,22 +103,19 @@ export default function Courses() {
                 <h2>{course.title}</h2>
                 <div className="discount-badge">
                   <BadgePercent size={15} />
-                  <span>{course.discount}</span>
+                  <span>{course.highlight}</span>
                 </div>
               </div>
 
               <div className="course-pricing">
-                <p className="price-primary">{course.monthly}</p>
-                {course.monthlyCombo ? (
-                  <p className="price-secondary">{course.monthlyCombo}</p>
-                ) : null}
-                <p className="price-six">{course.sixMonth}</p>
-                <p className="price-standard">{course.standard}</p>
+                <p className="price-primary">{course.fee}</p>
+                <p className="price-secondary">{course.subjects}</p>
+                <p className="price-six">{course.board}</p>
               </div>
 
               <div className="course-note">
                 <BookOpenCheck size={16} />
-                <span>{course.paymentNote}</span>
+                <span>{course.description}</span>
               </div>
 
               <div className="course-chips">
@@ -137,13 +129,49 @@ export default function Courses() {
                 className="enroll-btn"
                 whileHover={{ y: -2, scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={handleEnroll}
+                onClick={() => window.open('https://wa.me/918975756530', '_blank')}
               >
-                Enroll Now
+                Enquire on WhatsApp
               </motion.button>
             </motion.article>
           ))}
         </motion.section>
+
+        <section style={{maxWidth:'800px', margin:'60px auto 0', padding:'0 24px'}}>
+          <h2 style={{marginBottom:'24px', fontSize:'1.6rem'}}>Fee Summary</h2>
+          <table style={{width:'100%', borderCollapse:'collapse', border:'2.5px solid #1c1433', borderRadius:'16px', overflow:'hidden', background:'#fff'}}>
+            <thead>
+              <tr style={{background:'#ffd60a'}}>
+                <th style={{padding:'14px 18px', textAlign:'left', borderBottom:'2.5px solid #1c1433'}}>Program</th>
+                <th style={{padding:'14px 18px', textAlign:'left', borderBottom:'2.5px solid #1c1433'}}>Classes</th>
+                <th style={{padding:'14px 18px', textAlign:'left', borderBottom:'2.5px solid #1c1433'}}>Fee per Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{borderBottom:'2px solid #ebe4ff'}}>
+                <td style={{padding:'13px 18px', fontWeight:700}}>Foundation</td>
+                <td style={{padding:'13px 18px'}}>8th – 10th</td>
+                <td style={{padding:'13px 18px', color:'#0c9b6a', fontWeight:700}}>Rs 40,000</td>
+              </tr>
+              <tr style={{borderBottom:'2px solid #ebe4ff'}}>
+                <td style={{padding:'13px 18px', fontWeight:700}}>JEE / MHT-CET / NEET</td>
+                <td style={{padding:'13px 18px'}}>11th – 12th</td>
+                <td style={{padding:'13px 18px', color:'#0c9b6a', fontWeight:700}}>Rs 80,000</td>
+              </tr>
+              <tr>
+                <td style={{padding:'13px 18px', fontWeight:700}}>Hostel (Boys &amp; Girls — separate)</td>
+                <td style={{padding:'13px 18px'}}>11th – 12th only</td>
+                <td style={{padding:'13px 18px', color:'#0c9b6a', fontWeight:700}}>Rs 70,000 [CONFIRM: food included?]</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style={{textAlign:'center', marginTop:'32px'}}>
+            <a href="https://wa.me/918975756530" target="_blank" rel="noreferrer"
+              style={{display:'inline-flex', alignItems:'center', gap:'8px', padding:'14px 28px', background:'#2ee6a6', color:'#1c1433', fontWeight:700, fontSize:'1rem', borderRadius:'999px', border:'2.5px solid #1c1433', boxShadow:'4px 4px 0 #1c1433', textDecoration:'none'}}>
+              Enquire on WhatsApp
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   );
